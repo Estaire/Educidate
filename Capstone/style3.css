@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #0056b3;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    filter: invert(100%) brightness(200%);
+}
+
+.brand-name {
+    color: white;
+    font-size: 24px;
+    margin-left: 10px; 
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust height considering header height */
+}
+
+.navigation-pane {
+    width: 250px;
+    background: #f7f8f9;
+    padding: 20px 10px;
+    border-right: 1px solid #e9eBf0;
+}
+
+.content-pane {
+    flex-grow: 1;
+    background: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-button:hover {
+    background-color: lightgrey;
+}
+
+/* Triangle symbol */
+.triangle {
+    margin-left: 10px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+}
+
+/* Dropdown items */
+.dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content p:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.fa-file-lines {
+    margin-left: 4px;
+    margin-right: 5px;
+}
+
+.fa-book-open {
+    margin-right: 2px;
+}
+
+.fa-list-check {
+    margin-left: 1px;
+    margin-right: 3px;
+}
+
+.navigation-pane {
+    width: 250px;
+    background: #f7f8f9;
+    border-right: 1px solid #e9eBf0;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px; 
+}
+
+.nav-button:hover, .nav-button.active {
+    background-color: #d0e7ff; 
+    color: #0056b3;
+}
+
+.nav-button i {
+    font-size: 18px;
+}
+
+.navigation-pane.collapsed {
+    width: 75px;
+}
+
+.navigation-pane.collapsed .nav-button .label {
+    display: none;
+}
+
+.navigation-pane.collapsed .nav-button:hover .label {
+    display: inline-block;
+}
