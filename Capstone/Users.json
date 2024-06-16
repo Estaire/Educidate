@@ -1,0 +1,21 @@
+{
+    "Users": [
+        {
+            "username": "wsdaczx",
+            "major": "COMPUTER STUDIES (B.Sc.)",
+            "courses": [
+                "COMP1220",
+                "COMP1126",
+                "MATH1142"
+            ]
+        },
+        {
+            "username": "test@test.com",
+            "major": "COMPUTER STUDIES (B.Sc.)",
+            "courses": [
+                "COMP3911",
+                "SWEN3920"
+            ]
+        }
+    ]
+}

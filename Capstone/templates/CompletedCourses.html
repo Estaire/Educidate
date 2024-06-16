@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Completed Courses</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style4.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="" alt="ADT Logo">
+            <!-- Update the source with the path to your logo -->
+            <div class="user-icon">
+                <img src="user-icon.png" alt="User Icon">
+                <!-- Update the source with the path to your user icon -->
+            </div>
+        </header>
+        <nav class="navigation">
+            <a href="{{url_for('major')}}">Select Major/Minor</a>
+            <a href="{{url_for('tracker')}}">Progress</a>
+            <a href="#">View electives</a>
+        </nav>
+        <main class="content">
+            <h1>Enter Completed Courses</h1>
+            <form id="course-form" method="GET">
+                <input type="text" id="course-input" placeholder="Enter Course Code" required>
+                <button type="button" id="button">Add Course</button>
+            </form>
+            <form action="#" method="POST">
+                <button type="submit" id="complete-button">Complete</button>
+                <ul id="courses-list" name="courses-list">
+                    <!-- Entered courses will appear here -->
+                </ul>
+            </form>
+        </main>
+    </div>
+    <script src="{{url_for('static',filename='scripts2.js')}}"></script>
+</body>
+
+</html>

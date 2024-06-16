@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E8F0FE;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    border-radius: 8px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.login-box {
+    color: #333;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.utilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.utilities a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.utilities a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin:20px 0;
+    position:relative;
+    display:inline-block;
+}
+
+.e-label,
+.p-label {
+    font-size: small;
+    padding: 5px;
+    position: absolute;
+    pointer-events: none;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0.5;
+    background: #fff;
+    left: 10px;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.e-label {
+    top: calc(20% - 20px);
+}
+
+.p-label {
+    top: calc(28% + 20px);
+}
+
+input:focus + .p-label, input:not(:placeholder-shown) + .p-label {
+    opacity:1;
+    transform: scale(0.75) translateY(-165%) translateX(-14px);
+    color: #0056b3;
+}
+
+input:focus + .e-label, input:not(:placeholder-shown) + .e-label {
+    opacity:1;
+    transform: scale(0.75) translateY(-160%) translateX(-19px);
+    color: #0056b3;
+}
+
+input:not(:focus):not(:placeholder-shown) + .e-label {
+    color: grey; 
+}
+
+input:not(:focus):not(:placeholder-shown) + .p-label {
+    color: grey; 
+}
