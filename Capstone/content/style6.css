@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+    background-color: #a7d2ef;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-section {
+    padding: 40px;
+    width: 300px;
+    background-color: #f2f2f2;
+}
+
+.form-section h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group a {
+    color: #d9534f;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.form-group a:hover {
+    text-decoration: underline;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.form-group .remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.form-group .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5bc0de;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group .btn:hover {
+    background-color: #46b8da;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo span {
+    color: red;
+}
