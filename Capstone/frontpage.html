@@ -32,6 +32,32 @@
             </form>
         </div>
     </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const rememberCheckbox = document.getElementById('remember');
+
+        // Load the stored email and checkbox state when the page loads
+        window.onload = () => {
+            if (localStorage.getItem('remember') === 'true') {
+                emailInput.value = localStorage.getItem('email');
+                rememberCheckbox.checked = true;
+            }
+        };
+
+        // Save email and checkbox state to localStorage on form submit
+        loginForm.addEventListener('submit', function() {
+            if (rememberCheckbox.checked) {
+                localStorage.setItem('email', emailInput.value);
+                localStorage.setItem('remember', 'true');
+            } else {
+                localStorage.removeItem('email');
+                localStorage.removeItem('remember');
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
