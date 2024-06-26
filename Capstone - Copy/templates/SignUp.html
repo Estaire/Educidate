@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style6.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-section">
+            <div class="logo">
+                AD<span>T</span>
+            </div>
+            <img src="books.png" alt="Books Image">
+        </div>
+    <form action="#" method="POST">
+        <div class="form-section">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="form-group remember-me">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember Me</label>
+            </div>
+                <div class="form-group">
+                    <button class="btn">Sign Up</button>
+                </div>
+            </form>
+            <div class="login-link">
+                <a href="{{url_for('logout')}}">Login Here</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
