@@ -35,17 +35,17 @@
         },
         {
             "username": "easy@easy.com",
-            "major": "COMPUTER STUDIES (B.Sc.)",
+            "major": "INFORMATION TECHNOLOGY (B.Sc.)",
             "courses": [
-                "COMP3911",
-                "SWEN3920",
                 "COMP1220"
             ]
         },
         {
             "username": "nnn@nnn.com",
             "major": "COMPUTER STUDIES (B.Sc.)",
-            "courses": []
+            "courses": [
+                "COMP3911"
+            ]
         }
     ]
 }

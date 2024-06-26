@@ -245,9 +245,6 @@ def tracker():
                                 session['courses'] = courses
                                 session['faculty'] = m['faculty'] 
                                 session['courses'] = courses
-                                for i in session['courses']:
-                                            if i[:4] in session.get('faculty') or session.get('faculty')=="none":
-                                                session['elective'] = session['elective'] - 3
                                 remainingCourses = [ele for ele in required if ele not in courses]
                                 print("LOOK HERE",remainingCourses)
     if session.get('courses') is None:
@@ -268,10 +265,6 @@ def tracker():
                             print(remainingCourses)
                             print(session.get('elective'))
                             print(session.get('total'))    
-                            session['total']=session['total'] - (len(session.get('courses')*3))
-                            for i in session['courses']:
-                                        if i[:4] in session.get('faculty') or session.get('faculty')=="none":
-                                            session['elective'] = session['elective'] - 3
                             print(session.get('total'))
                             print(session.get('elective'))                       
             except:
@@ -287,7 +280,7 @@ def tracker():
         print(session.get('total'))
         session['total']=session['total'] - (len(session.get('courses')*3))
         for i in session['courses']:
-            if i[:4] in session.get('faculty') or session.get('faculty') == "none":
+            if i[:4] in session.get('faculty') or session.get('faculty') == "none" and session['elective'] > 0:
                 session['elective'] = session['elective'] - 3
         print(session.get('total'))
         print(session.get('elective'))
