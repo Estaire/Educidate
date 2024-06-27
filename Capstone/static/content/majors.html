@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majors Page</title>
-    <link rel="stylesheet" href="../style7.css">
+    <link rel="stylesheet" href="style7.css">
 </head>
 
 <body>
@@ -40,62 +40,6 @@
         </table>
     </div>
 
-    <script>
-        // Example course data
-        const courses = [{
-            code: 'CS101',
-            name: 'Introduction to Computer Science',
-            credits: 4
-        }, {
-            code: 'MATH201',
-            name: 'Calculus I',
-            credits: 3
-        }, {
-            code: 'PHYS101',
-            name: 'General Physics',
-            credits: 4
-        }, ];
-
-        function renderCourses() {
-            const majorsTableBody = document.getElementById('majorsTable').querySelector('tbody');
-            majorsTableBody.innerHTML = '';
-            courses.forEach(course => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                <td>${course.code}</td>
-                <td>${course.name}</td>
-                <td>${course.credits}</td>
-                <td><button class="button" onclick="markAsComplete('${course.code}')">Mark as Complete</button></td>
-            `;
-                majorsTableBody.appendChild(row);
-            });
-        }
-
-        function markAsComplete(courseCode) {
-            const courseIndex = courses.findIndex(course => course.code === courseCode);
-            if (courseIndex > -1) {
-                const course = courses.splice(courseIndex, 1)[0];
-                renderCourses();
-                addToCompletedCourses(course);
-            }
-        }
-
-        function addToCompletedCourses(course) {
-            const completedCoursesTableBody = document.getElementById('completedCoursesTable').querySelector('tbody');
-            const row = document.createElement('tr');
-            row.classList.add('completed');
-            row.innerHTML = `
-            <td>${course.code}</td>
-            <td>${course.name}</td>
-            <td>${course.credits}</td>
-        `;
-            completedCoursesTableBody.appendChild(row);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            renderCourses();
-        });
-    </script>
 
 </body>
 
