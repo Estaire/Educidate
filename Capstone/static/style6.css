@@ -1,123 +1,161 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0e0e0;
+    background-color: #E8F0FE;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: max-content;
+    border-radius: 8px;
     display: flex;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.image-section {
-    background-color: #a7d2ef;
-    padding: 40px;
+.left-section {
+    flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.right-section {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.login-box {
+    color: #333;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
-.image-section img {
-    max-width: 100%;
-    height: auto;
-}
-
-.form-section {
-    padding: 40px;
-    width: 300px;
-    background-color: #f2f2f2;
-}
-
-.form-section h2 {
-    margin: 0 0 20px 0;
-    font-size: 24px;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input {
-    width: 100%;
+input[type="email"],
+input[type="password"] {
     padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 90%;
 }
 
-.form-group a {
-    color: #d9534f;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-.form-group a:hover {
-    text-decoration: underline;
-}
-
-.form-group input[type="checkbox"] {
-    width: auto;
-    margin-right: 5px;
-}
-
-.form-group .remember-me {
-    display: flex;
-    align-items: center;
-}
-
-.form-group .btn {
-    width: 100%;
-    padding: 10px;
+button {
+    background-color: #007BFF;
+    color: white;
     border: none;
-    background-color: #5bc0de;
-    color: #fff;
+    padding: 10px;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
+    margin-top: 30px;
 }
 
-.form-group .btn:hover {
-    background-color: #46b8da;
+button:hover {
+    background-color: #0056b3;
 }
 
-.login-link {
-    text-align: center;
-    margin-top: 20px;
+.utilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
 }
 
-.login-link a {
-    color: #d9534f;
+.utilities a {
+    color: #007BFF;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.login-link a:hover {
+.utilities a:hover {
     text-decoration: underline;
 }
 
-.logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
+p {
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
 }
 
-.logo span {
-    color: red;
+.e-label,
+.c-label,
+.p-label {
+    font-size: small;
+    padding: 5px;
+    position: absolute;
+    pointer-events: none;
+    transition: 0.2s;
+    transition-timing-function: ease;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0.5;
+    background: #fff;
+    left: 10px;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.e-label {
+    top: calc(20% - 20px);
+}
+
+.p-label {
+    top: calc(26% + 20px);
+}
+
+.c-label {
+    top: calc(49% + 20px);
+}
+
+input:focus+.p-label,
+input:not(:placeholder-shown)+.p-label {
+    opacity: 1;
+    transform: scale(0.75) translateY(-165%) translateX(-14px);
+    color: #0056b3;
+}
+
+input:focus+.e-label,
+input:not(:placeholder-shown)+.e-label {
+    opacity: 1;
+    transform: scale(0.75) translateY(-160%) translateX(-19px);
+    color: #0056b3;
+}
+
+input:focus+.c-label,
+input:not(:placeholder-shown)+.c-label {
+    opacity: 1;
+    transform: scale(0.75) translateY(-170%) translateX(-9px);
+    color: #0056b3;
+}
+
+input:not(:focus):not(:placeholder-shown)+.e-label {
+    color: grey;
+}
+
+input:not(:focus):not(:placeholder-shown)+.p-label {
+    color: grey;
+}
+
+input:not(:focus):not(:placeholder-shown)+.c-label {
+    color: grey;
 }
