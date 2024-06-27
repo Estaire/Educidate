@@ -1,52 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1f1f1f;
+    color: #ffffff;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
+    max-width: 900px;
+    margin: 50px auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #2b2b2b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    /* Rounded corners for the container */
 }
 
-h1 {
+h1,
+h2 {
     text-align: center;
+    color: #ffffff;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    border-radius: 10px;
+    /* Rounded corners for the table */
+    overflow: hidden;
+    /* Ensure the rounded corners are applied */
 }
 
 table,
 th,
 td {
-    border: 1px solid #ddd;
+    border: 1px solid #3a3a3a;
 }
 
 th,
 td {
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #343a40;
+    color: #ffffff;
 }
 
-.completed {
-    background-color: #dff0d8;
+tr:nth-child(even) {
+    background-color: #2b2b2b;
+}
+
+tr:nth-child(odd) {
+    background-color: #3a3a3a;
+}
+
+tr.completed {
+    background-color: #28a745;
+    color: #ffffff;
 }
 
 .button {
     padding: 5px 10px;
-    color: white;
+    color: #ffffff;
     background-color: #007bff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    /* Rounded corners for the button */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#completedCoursesTable {
+    margin-top: 30px;
 }
