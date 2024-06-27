@@ -1,0 +1,89 @@
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #000000;
+}
+
+.dark-mode .container {
+    background-color: #2A2E34;
+    color: white;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #000000;
+}
+
+.dark-mode h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.dark-mode h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table,
+th,
+td {
+    border: 1px solid #d1d1d1;
+}
+
+.dark-mode table {
+    border: 1px solid #3a3a3a;
+}
+
+.dark-mode th {
+    border: 1px solid #3a3a3a;
+}
+
+.dark-mode td {
+    border: 1px solid #3a3a3a;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+.dark-mode th {
+    background-color: #343a40;
+    color: #d1d1d1;
+}
+
+th {
+    background-color: #d1d1d1;
+    color: #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #2b2b2b;
+}
+
+tr:nth-child(odd) {
+    background-color: #3a3a3a;
+}
+
+tr.completed {
+    background-color: #28a745;
+    color: #000000;
+}
+
+#completedCoursesTable {
+    margin-top: 30px;
+}
