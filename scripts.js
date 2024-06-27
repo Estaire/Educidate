@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         'Majors': './content/majors.html',
         'Minors': './content/minors.html',
         'Electives': './content/electives.html',
-        'Logout': './frontpage.html'
+        'Logout': './frontpage.html',
+        'Sign Up': './content/SignUp.html'
     };
 
     const loadContent = async (contentFilePath, buttonText) => {
