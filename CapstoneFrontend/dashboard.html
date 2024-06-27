@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Dashboard</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/80443ca163.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="./logos/Software_Talibans_transparent.png" alt="My Image" class="logo">
+                <span class="brand-name">educidate</span>
+            </div>
+            <div class="profile-container">
+                <img src="./stock-images/blank-profile-picture.png" alt="User Avatar" class="user-avatar" id="userAvatar">
+                <div class="popover" id="profilePopover">
+                    <div class="popover-content">
+                        <img src="./stock-images/blank-profile-picture.png" alt="User Avatar" class="large-avatar">
+                        <div id="greeting"></div>
+                        <button class="popover-button" id="settingsButton"><i class="fa-solid fa-gear"></i>Settings</button>
+                        <button class="popover-button" id="darkModeButton"><i class="fa-solid fa-moon"></i>Dark mode</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="navigation-pane collapsed" id="nav-pane">
+            <button id="progressButton" class="nav-button active" onclick="selectOption(this)"><i class="fa-solid fa-list-check"></i><span class="label">Progress</span></button>
+            <button id="majorsButton" class="nav-button" onclick="selectOption(this)"><i class="fa-solid fa-graduation-cap"></i><span class="label">Majors</span></button>
+            <button id="minorsButton" class="nav-button" onclick="selectOption(this)"><i class="fa-regular fa-file-lines"></i><span class="label">Minors</span></button>
+            <button id="electivesButton" class="nav-button" onclick="selectOption(this)"><i class="fa-solid fa-book-open"></i><span class="label">Electives</span></button>
+            <button id="logoutButton" class="nav-button" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i><span class="label">Logout</span></button>
+        </div>
+        <div class="content-pane" id="content-pane">
+        </div>
+    </main>
+    <script src="scripts.js?v=1"></script>
+</body>
+</html>

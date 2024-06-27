@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <link rel="stylesheet" href="content/progress.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-circle" id="progressCircle">
+            <svg class="progress-ring" width="200" height="200">
+                <circle class="progress-ring-border" stroke-width="10" fill="transparent" r="90" cx="100" cy="100"/>
+                <circle class="progress-ring-fill" stroke-width="10" fill="transparent" r="90" cx="100" cy="100"/>
+            </svg>
+            <div class="progress-value" id="progressValue">24%</div>
+        </div>
+        <div class="credit-circle" id="creditCircle">
+            <svg class="credit-ring" width="200" height="200">
+                <circle class="credit-ring-border" stroke-width="10" fill="transparent" r="90" cx="100" cy="100"/>
+                <circle class="credit-ring-ring" stroke-width="10" fill="transparent" r="90" cx="100" cy="100"/>
+            </svg>
+            <div class="credit-value" id="creditValue"><span class="credit-number">0</span><br><span style="color:gray; font-size: 16px" class="credit-text">Credits</span></div>
+        </div>
+    </div>
+    <div class="boxes-container">
+        <div class="box" id="majorsBox">
+            <h2>Majors</h2>
+            <div class="content">
+                <p>Majors required...</p>
+            </div>
+        </div>
+        <div class="box" id="minorsBox">
+            <h2>Minors</h2>
+            <div class="content">
+                <p>Minors required...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

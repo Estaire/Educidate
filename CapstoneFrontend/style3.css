@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #0056b3;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    filter: invert(100%) brightness(200%);
+}
+
+.brand-name {
+    color: white;
+    font-size: 24px;
+    margin-left: 10px; 
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 50px); 
+}
+
+.content-pane {
+    flex-grow: 1;
+    background: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.fa-file-lines {
+    margin-left: 4px;
+    margin-right: 5px;
+}
+
+.fa-book-open {
+    margin-right: 2px;
+}
+
+.fa-list-check {
+    margin-left: 1px;
+    margin-right: 3px;
+}
+
+.fa-moon {
+    margin-left: 2px;
+    margin-right: 9px;
+}
+
+.fa-sun {
+    margin-right: 9px;
+}
+
+.fa-gear {
+    margin-right: 8px;
+}
+
+.fa-arrow-right-from-bracket {
+    margin-right: 3px;
+    margin-left: 2px;
+}
+
+.navigation-pane {
+    position: relative;
+    padding: 20px 10px;
+    width: 250px;
+    background: #f7f8f9;
+    border-right: 1px solid #e9eBf0;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px; 
+    border-radius: 5px;
+}
+
+#logoutButton {
+    position:  absolute;
+    width: 92%;
+    bottom: 0;
+}
+
+.nav-button:hover, .nav-button.active {
+    background-color: #d0e7ff; 
+    color: #0056b3;
+}
+
+.nav-button i {
+    font-size: 18px;
+}
+
+.navigation-pane.collapsed {
+    width: 75px;
+}
+
+.navigation-pane.collapsed .nav-button .label {
+    display: none;
+}
+
+.navigation-pane.collapsed .nav-button:hover .label {
+    display: inline-block;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.user-avatar {
+    margin: 3px 10px 0 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popover {
+    display: none;
+    position: absolute;
+    right: 25%;
+    top: 135%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 280px;
+    color: black;
+}
+
+.popover-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.large-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#greeting {
+    margin-bottom: 20px;
+}
+
+#settingsButton, #darkModeButton {
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#settingsButton:hover, #darkModeButton:hover {
+    background-color: #ddd;
+}
+
+.dark-mode .content-pane {
+    background-color: #2A2E34;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #3C414A;
+}
+
+.dark-mode .popover {
+    background-color: #30353C;
+    color: white;
+    border-color: #3C414A;
+    box-shadow: 0 2px 16px #0006;
+}
+
+.dark-mode .popover-button {
+    background-color: #666;
+    color: #30353C;
+}
+
+.dark-mode .popover-button:hover {
+    background-color: #777;
+}
+
+.dark-mode .navigation-pane {
+    background: #30353C;
+    border-right-color: #3C414A;
+}
+
+.dark-mode .nav-button {
+    color: white;
+}
+
+.dark-mode .nav-button:hover, .dark-mode .nav-button.active {
+    background-color: #0056b3; 
+    color: white;
+}
