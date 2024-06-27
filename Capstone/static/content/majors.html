@@ -1,12 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majors</title>
+    <title>Majors Page</title>
+    <link rel="stylesheet" href="style7.css">
 </head>
+
 <body>
-    <h1>Majors</h1>
-    <p>This is the content for the Majors page.</p>
+
+    <div class="container">
+        <h1>Majors Page</h1>
+        <table id="majorsTable">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credits</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Courses will be added here dynamically -->
+            </tbody>
+        </table>
+        <h2>Completed Courses</h2>
+        <table id="completedCoursesTable">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Completed courses will be shown here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Example course data
+        const courses = [{
+            code: 'CS101',
+            name: 'Introduction to Computer Science',
+            credits: 4
+        }, {
+            code: 'MATH201',
+            name: 'Calculus I',
+            credits: 3
+        }, {
+            code: 'PHYS101',
+            name: 'General Physics',
+            credits: 4
+        }, ];
+
+        function renderCourses() {
+            const majorsTableBody = document.getElementById('majorsTable').querySelector('tbody');
+            majorsTableBody.innerHTML = '';
+            courses.forEach(course => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td>${course.code}</td>
+                <td>${course.name}</td>
+                <td>${course.credits}</td>
+                <td><button class="button" onclick="markAsComplete('${course.code}')">Mark as Complete</button></td>
+            `;
+                majorsTableBody.appendChild(row);
+            });
+        }
+
+        function markAsComplete(courseCode) {
+            const courseIndex = courses.findIndex(course => course.code === courseCode);
+            if (courseIndex > -1) {
+                const course = courses.splice(courseIndex, 1)[0];
+                renderCourses();
+                addToCompletedCourses(course);
+            }
+        }
+
+        function addToCompletedCourses(course) {
+            const completedCoursesTableBody = document.getElementById('completedCoursesTable').querySelector('tbody');
+            const row = document.createElement('tr');
+            row.classList.add('completed');
+            row.innerHTML = `
+            <td>${course.code}</td>
+            <td>${course.name}</td>
+            <td>${course.credits}</td>
+        `;
+            completedCoursesTableBody.appendChild(row);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCourses();
+        });
+    </script>
+
 </body>
+
 </html>
